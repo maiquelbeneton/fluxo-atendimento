@@ -6,10 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-cliente.component.css']
 })
 export class CadastroClienteComponent implements OnInit {
+  
+  cliente: string = "Proprietário";
+  contador : number = 0;
+  imagem : string;
 
   constructor() { }
 
   ngOnInit() {
+    let self = this;
+
+    setTimeout(() => {
+      self.cliente = "Proprietário iniciando...";
+      self.imagem = "assets/neymar_caido.jpg";
+    }, 1000);
+    
+    let interval = setInterval(() => {
+      self.cliente = "Proprietário " + self.contador++;
+      if (self.contador == 5){
+        clearInterval(interval);
+        self.imagem  ="assets/neymar2.jpg";
+      }
+    }, 2000);
   }
 
 }
