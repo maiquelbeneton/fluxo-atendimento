@@ -39,11 +39,9 @@ export class CadastroClienteComponent implements OnInit {
       this.pessoa.nomePessoa = "Pletsch";
       this.pessoa.tipoPessoa = TipoPessoa.Juridica;
     }    
-  }
 
-  levantarNeymar() : void {
-    this.imagem = "assets/images.jpg";
-  }
 
+    this.svcCliente.getClientes();
+  }
 
 }
