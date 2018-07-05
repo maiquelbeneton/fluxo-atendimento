@@ -1,6 +1,9 @@
 <p>
-  {{ cliente }}
+  <!-- *ngIf mostra ou não o XML {{cliente}}-->
+  <span *ngIf="pessoa.tipoPessoa ==1">{{ cliente }}</span> 
+
   <app-tipo-pessoa [(tipoPessoa)]="pessoa.tipoPessoa"></app-tipo-pessoa>
+  
   <app-tipo-cliente></app-tipo-cliente>
   <!-- <img src="assets/neymar_caido.jpg"/> -->
   <!-- <img [src]="imagem" [hidden]="imagem == null"/>
