@@ -23,11 +23,15 @@ export class CadastroClienteComponent implements OnInit {
     
     let interval = setInterval(() => {
       self.cliente = "Proprietário " + self.contador++;
-      if (self.contador == 5){
+      if (self.contador == 3){
         clearInterval(interval);
         self.imagem  ="assets/neymar2.jpg";
       }
     }, 2000);
+  }
+
+  levantarNeymar() : void {
+    this.imagem = "assets/images.jpg";
   }
 
 }
