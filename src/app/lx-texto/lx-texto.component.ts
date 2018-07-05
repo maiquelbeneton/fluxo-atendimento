@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'lx-texto',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LxTextoComponent implements OnInit {
 
+  @Input() texto : string;
+  @Input() label : string;
+  @Output() textoChange: EventEmitter<string> = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  notificarMudanca(){
+    this.textoChange.emit(this.texto);
   }
 
 }

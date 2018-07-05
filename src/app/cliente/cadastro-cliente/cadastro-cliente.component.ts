@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pessoa } from '../pessoa';
 import { TipoPessoa } from '../tipo-pessoa';
+import { ClienteService } from '../cliente.service';
 
 @Component({
   selector: 'app-cadastro-cliente',
@@ -14,7 +15,7 @@ export class CadastroClienteComponent implements OnInit {
   imagem : string;
   pessoa: Pessoa;
 
-  constructor() { }
+  constructor(private svcCliente: ClienteService) { }
 
   ngOnInit() {
     let self = this;

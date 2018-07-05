@@ -18,17 +18,32 @@
     </div>    
   </div>
   <div class="row">
-    <div class="col-2"><input type="number"/></div>
-    <div class="col-9"><lx-texto></lx-texto></div>
-    <div class="col-1">Ajuda</div>
+    <div class="col-2">
+      <label>Código do cliente
+        <input 
+          type="number"
+          class="form-control"/>
+      </label>  
+    </div>
+    <div class="col-9">
+      <lx-texto 
+        [(texto)]="pessoa.nomePessoa"
+        label="Nome do Cliente">
+      </lx-texto>
+    </div>
+    <div class="col-1" style="font-size: 40px">
+      <lx-modal 
+        titulo="Opções" 
+        icone="icon-lx-user-down"
+        > 
+        Teste do ng-content</lx-modal>
+    </div>
   </div>
 </div>
   <!-- *ngIf mostra ou não o XML {{cliente}}
   <span *ngIf="pessoa.tipoPessoa ==1">{{ cliente }}</span> 
   -->
-  
-
-  
+ 
   <!-- <img src="assets/neymar_caido.jpg"/> -->
   <!-- <img [src]="imagem" [hidden]="imagem == null"/>
   <button (click)="levantarNeymar()">Levanta Neymar</button> 
@@ -37,3 +52,6 @@
   <input type="text"[(ngModel)] = "pessoa.nomePessoa"/>
   <input type="number"[(ngModel)] = "pessoa.tipoPessoa"/> 
 -->
+===== 
+<br/>
+{{ pessoa | json}}

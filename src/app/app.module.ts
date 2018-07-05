@@ -8,6 +8,7 @@ import { ClienteService } from './cliente.service';
 import { TipoClienteComponent } from './cliente/tipo-cliente/tipo-cliente.component';
 import { FormsModule } from '@angular/forms';
 import { LxTextoComponent } from './lx-texto/lx-texto.component';
+import { LxModalComponent } from './lx-modal/lx-modal.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LxTextoComponent } from './lx-texto/lx-texto.component';
     CadastroClienteComponent,
     TipoPessoaComponent,
     TipoClienteComponent,
-    LxTextoComponent
+    LxTextoComponent,
+    LxModalComponent
   ],
   imports: [
     BrowserModule,
