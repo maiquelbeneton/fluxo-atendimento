@@ -1,17 +1,39 @@
-<p>
-  <!-- *ngIf mostra ou não o XML {{cliente}}-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <fieldset class="form-group">
+        <legend>Cliente</legend>
+        <span>{{ cliente }}</span>
+      </fieldset>
+    </div>
+    <div class="col">
+      <fieldset>
+        <legend>Tipo de Pessoa</legend>
+        <app-tipo-pessoa [(tipoPessoa)]="pessoa.tipoPessoa"></app-tipo-pessoa>
+      </fieldset>
+    </div>
+    <div class="col">
+      Tipo de Cliente<br/>
+        <app-tipo-cliente></app-tipo-cliente>
+    </div>    
+  </div>
+  <div class="row">
+    <div class="col-2"><input type="number"/></div>
+    <div class="col-9"><lx-texto></lx-texto></div>
+    <div class="col-1">Ajuda</div>
+  </div>
+</div>
+  <!-- *ngIf mostra ou não o XML {{cliente}}
   <span *ngIf="pessoa.tipoPessoa ==1">{{ cliente }}</span> 
-
-  <app-tipo-pessoa [(tipoPessoa)]="pessoa.tipoPessoa"></app-tipo-pessoa>
+  -->
   
-  <app-tipo-cliente></app-tipo-cliente>
+
+  
   <!-- <img src="assets/neymar_caido.jpg"/> -->
   <!-- <img [src]="imagem" [hidden]="imagem == null"/>
   <button (click)="levantarNeymar()">Levanta Neymar</button> 
   -->
+  <!-- 
   <input type="text"[(ngModel)] = "pessoa.nomePessoa"/>
-  <input type="number"[(ngModel)] = "pessoa.tipoPessoa"/>
-</p>
- ==========
- <br/>
- {{ pessoa | json }}
+  <input type="number"[(ngModel)] = "pessoa.tipoPessoa"/> 
+-->
