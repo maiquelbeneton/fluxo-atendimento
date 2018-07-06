@@ -13,6 +13,7 @@ export class LxColDirective implements OnInit {
 
   ngOnInit(){
     this.elemento.nativeElement.classList.add("col-"+ this.tamanho);
+  
   }
 
 }
