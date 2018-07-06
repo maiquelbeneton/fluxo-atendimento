@@ -14,6 +14,7 @@ export class CadastroClienteComponent implements OnInit {
   contador : number = 0;
   imagem : string;
   pessoa: Pessoa;
+  pessoas:Pessoa[];
 
   constructor(private svcCliente: ClienteService) { }
 
@@ -41,7 +42,11 @@ export class CadastroClienteComponent implements OnInit {
     }    
 
 
-    this.svcCliente.getClientes();
+    let servicoClientes = this.svcCliente.getClientes();
+
+    servicoClientes.subscribe(res => {
+      this.pessoas = res;
+    });
   }
 
 }
