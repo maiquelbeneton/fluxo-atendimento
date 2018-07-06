@@ -32,7 +32,7 @@ import { CadastroFornecedorComponent } from './cliente/cadastro-fornecedor/cadas
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path : "cadastro-cliente", component : CadastroClienteComponent }
+      { path : "cadastro-cliente", component : CadastroClienteComponent },
       { path : "cadastro-fornecedor", component : CadastroFornecedorComponent }
     ])
 
